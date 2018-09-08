@@ -1,4 +1,4 @@
-/*   Josephine Plass-Nielsen
+package war_game;/*   Josephine Plass-Nielsen
      Oliver W. Nielsen
      September 10, 2018
      Purpose: This program is meant to simulate a game of war

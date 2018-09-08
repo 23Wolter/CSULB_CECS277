@@ -1,4 +1,4 @@
-/*   Josephine Plass-Nielsen
+package war_game;/*   Josephine Plass-Nielsen
      Oliver W. Nielsen
      September 10, 2018
      Purpose: This program is meant to simulate a game of war
@@ -26,14 +26,24 @@ public class Main {
 
         Deck mainDeck = new Deck(cards); //create a main deck of playing cards
 
-        mainDeck.shuffle(); //shuffle the deck
+        ArrayList<Card> test = new ArrayList<>();
+        test.add(new Card(0, "hearts", true));
+        test.add(new Card(1, "hearts", true));
+        test.add(new Card(2, "hearts", true));
+        test.add(new Card(3, "hearts", true));
+        Deck testDeck = new Deck(test);
+        System.out.println(testDeck);
+        //testDeck.shuffle();
+        System.out.println(testDeck);
+
+        //mainDeck.shuffle(); //shuffle the deck
 
         //end of pre game phase
         //----------------------------------------
 
 
         //main game phase
-        ArrayList<ArrayList<Card>> splitDeck = mainDeck.split(2);
+        ArrayList<ArrayList<Card>> splitDeck = testDeck.split(2);
 
         Deck deck1 = new Deck(splitDeck.get(0));
         Deck deck2 = new Deck(splitDeck.get(1));

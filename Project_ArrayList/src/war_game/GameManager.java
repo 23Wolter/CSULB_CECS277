@@ -1,3 +1,5 @@
+package war_game;
+
 import java.util.ArrayList;
 
 /*   Josephine Plass-Nielsen
@@ -20,14 +22,14 @@ import java.util.ArrayList;
 
         if(playerCard1.rank > playerCard2.rank){
 
-            System.out.println(player1 + " wins the round");
+            System.out.println(player1.name + " wins the round");
 
             player1.deck.cards.addAll(winnerPile);
             winnerPile.clear();
         }
         else if(playerCard1.rank < playerCard2.rank){
 
-            System.out.println(player2 + " wins the round");
+            System.out.println(player2.name + " wins the round");
 
             player2.deck.cards.addAll(winnerPile);
             winnerPile.clear();

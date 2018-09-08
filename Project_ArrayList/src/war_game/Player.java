@@ -1,12 +1,11 @@
-package war_game;/*   Josephine Plass-Nielsen
-     Oliver W. Nielsen
+/*   Josephine Plass-Nielsen & Oliver W. Nielsen
      September 10, 2018
-     Purpose: This program is meant to simulate a game of war
-     Inputs: User's name
-     Output: The war simulation and the winner of the game
+     Purpose: This class defines a player
+     Inputs: The deck and the player's name
+     Output: A description of the player
 */
 
-
+package war_game;
 import java.util.ArrayList;
 
 //This class represents a player in the game and her "abilities"
@@ -16,12 +15,11 @@ public class Player {
     String name;
     Card hand;
 
-    //Default constructer
+    //Default constructor
     public Player(){
         deck = new Deck();
         name = "Jane Doe";
         hand = null;
-
     }
 
     //Constructor initializing the player with a deck and a name
@@ -38,11 +36,17 @@ public class Player {
         ArrayList<Card> cards = deck.getCards(); //get all cards from the deck
         Card topCard = cards.get(0); //get the top card
         topCard.facedown = false; //turn it faceup
-        deck.removeTopCard();
+        deck.removeTopCard(); //removes the top card from deck
         return topCard;
     }
 
+    //Returns the name
+    public String getName(){
 
+        return name;
+    }
+
+    //Prints the variables of the class
     public String toString() {
         return "The player: " + name + ", with the deck: " + deck;
     }

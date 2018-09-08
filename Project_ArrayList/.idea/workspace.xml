@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f774e6c-c2c8-40ca-8627-02d9ceba83ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Card.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/GameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project_ArrayList/war_game/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/war_game/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/war_game/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/war_game/GameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/GameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/war_game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/war_game/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/war_game/Player.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,32 +48,38 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="172" />
+          <entry key="java" value="3544" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="172" />
+          <entry key="JAVA" value="3544" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/war_game/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+            <state relative-caret-position="274">
+              <caret line="74" column="101" lean-forward="true" selection-start-line="74" selection-start-column="101" selection-end-line="74" selection-end-column="101" />
+              <folding>
+                <element signature="e#0#2860#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/war_game/GameManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="56">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            <state relative-caret-position="3">
+              <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#2815#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,9 +87,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/war_game/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+            <state relative-caret-position="782">
+              <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
               <folding>
+                <element signature="e#0#1195#0" expanded="true" />
                 <element signature="e#1071#1072#0" expanded="true" />
                 <element signature="e#1144#1145#0" expanded="true" />
               </folding>
@@ -95,9 +101,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/war_game/Deck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="1530">
+              <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
               <folding>
+                <element signature="e#0#3346#0" expanded="true" />
                 <element signature="imports" expanded="true" />
                 <element signature="e#672#673#0" expanded="true" />
                 <element signature="e#714#715#0" expanded="true" />
@@ -109,8 +116,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/war_game/Card.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="969">
+              <caret line="66" column="2" lean-forward="true" selection-start-line="66" selection-start-column="2" selection-end-line="66" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#1499#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,9 +133,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/war_game/Main.java" />
+        <option value="$PROJECT_DIR$/src/war_game/Card.java" />
+        <option value="$PROJECT_DIR$/src/war_game/Deck.java" />
         <option value="$PROJECT_DIR$/src/war_game/Player.java" />
         <option value="$PROJECT_DIR$/src/war_game/GameManager.java" />
-        <option value="$PROJECT_DIR$/src/war_game/Main.java" />
       </list>
     </option>
   </component>
@@ -169,7 +181,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536439444253" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536444903365" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
@@ -225,8 +237,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="1.0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -248,18 +260,32 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/war_game/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="74" column="101" lean-forward="true" selection-start-line="74" selection-start-column="101" selection-end-line="74" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#2860#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/war_game/Card.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        <state relative-caret-position="969">
+          <caret line="66" column="2" lean-forward="true" selection-start-line="66" selection-start-column="2" selection-end-line="66" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#1499#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/war_game/Deck.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="1530">
+          <caret line="104" column="26" selection-start-line="104" selection-start-column="26" selection-end-line="104" selection-end-column="26" />
           <folding>
+            <element signature="e#0#3346#0" expanded="true" />
             <element signature="imports" expanded="true" />
             <element signature="e#672#673#0" expanded="true" />
             <element signature="e#714#715#0" expanded="true" />
@@ -269,9 +295,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/war_game/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="45" column="4" lean-forward="true" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
+        <state relative-caret-position="782">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
+            <element signature="e#0#1195#0" expanded="true" />
             <element signature="e#1071#1072#0" expanded="true" />
             <element signature="e#1144#1145#0" expanded="true" />
           </folding>
@@ -280,15 +307,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/war_game/GameManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/war_game/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+        <state relative-caret-position="3">
+          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#2815#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

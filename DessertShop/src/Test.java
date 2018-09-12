@@ -6,5 +6,5 @@
     Output:
 */
 
-public class Tester {
+public class Test {
 }

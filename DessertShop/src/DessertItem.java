@@ -6,8 +6,6 @@
     Output:
 */
 
-
-
 public abstract class DessertItem {
 
     protected String name;

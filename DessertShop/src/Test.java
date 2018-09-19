@@ -8,5 +8,11 @@
 
 public class Test {
 
+    public Test() {
+
+    }
+
+    Candy candy = new Candy();
+    candy.getCost();
 
 }

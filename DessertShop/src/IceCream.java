@@ -8,7 +8,7 @@
 
 public class IceCream extends DessertItem {
 
-    private int cost;
+    protected int cost;
 
     //Default constructor
     public IceCream(){

@@ -8,19 +8,18 @@
 
 public class Candy extends DessertItem {
 
-    private String name;
     private double weight;
     private double pricePrLbs;
 
     public Candy() {
-        name = "lollipop";
+        super.name = "lollipop";
         weight = 0.20;
         pricePrLbs = 100;
     }
 
     public Candy(String name, double weight, int pricePrLbs){
 
-        this.name = name;
+        super.name = name;
         this.weight = weight;
         this.pricePrLbs = pricePrLbs;
     }
@@ -31,5 +30,13 @@ public class Candy extends DessertItem {
         int price = (int)(long)Math.round(pricePrLbs*weight);
 
         return price;
+    }
+
+    public double getPricePrLbs() {
+        return pricePrLbs;
+    }
+
+    public double getWeight() {
+        return weight;
     }
 }

@@ -6,5 +6,22 @@
     Output:
 */
 
-public class Sundae {
+public class Sundae extends IceCream {
+
+    private int topping;
+
+    public Sundae(){
+
+        super.name = "Sundae Icecream";
+
+
+    }
+
+    public Sundae(int topping){
+
+        super.name = name;
+        super.cost = cost;
+
+
+    }
 }

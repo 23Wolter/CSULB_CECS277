@@ -44,6 +44,11 @@ public class Test {
         System.out.println("");
 
 
+        System.out.println("***ICECREAM CLASS TESTING***");
+        IceCream icecream = new IceCream();
+        System.out.println(icecream);
+
+
 
     }
 

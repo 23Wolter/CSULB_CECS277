@@ -16,15 +16,17 @@ public class IceCream extends DessertItem {
 
     //the cost of an ice cream, the access modifier is protected because the Sundae class needs access to this variabel
     protected int cost;
-    protected double calories; //the calories of an ice cream, is protected so Sundae can access it
+    protected int calories; //the calories of an ice cream, is protected so Sundae can access it
 
     //default constructor, sets cost to 500 cents, and the calories to 470
     /**
      * default constructor, sets cost to 500 cents, and the calories to 470
      */
     public IceCream(){
+        super.name = "strawberry";
         cost = 500;
         calories = 470;
+
     }
 
     //constructor takes a cost in cents
@@ -34,7 +36,8 @@ public class IceCream extends DessertItem {
      * @param cost - the cost of an ice cream in cents, and an amount of calories
      * @param calories - the calories of an ice cream
      */
-    public IceCream(int cost, double calories){
+    public IceCream(String name, int cost, int calories){
+        super.name = name;
         this.cost = cost;
         this.calories = calories;
     }
@@ -55,7 +58,16 @@ public class IceCream extends DessertItem {
     /**
      * @return the amount of calories of an ice cream
      */
-    public double getCalories() {
+    public int getCalories() {
         return calories;
+    }
+
+    //returns a string with information about this class
+    /**
+     * @return a string with information about this class
+     */
+    @Override
+    public String toString() {
+        return "This is an icecream with the flavor: " + super.name + ". The price pr icecream is: " + cost + " cents. The calories of this item are: " + calories + ".";
     }
 }

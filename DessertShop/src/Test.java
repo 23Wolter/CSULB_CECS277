@@ -6,7 +6,6 @@
     Output:
 */
 
-import sun.security.provider.Sun;
 
 public class Test {
 

@@ -6,6 +6,8 @@
     Output:
 */
 
+import sun.security.provider.Sun;
+
 public class Test {
 
     public static void main (String[] args){
@@ -87,6 +89,10 @@ public class Test {
         System.out.println("");
         System.out.println("--------------------");
         System.out.println("");
+
+        IceCream iceCream = new IceCream();
+        Sundae sundae = new Sundae(iceCream, 40, 176, "Super Duper Funday Sundae");
+        System.out.println(sundae);
 
     }
 

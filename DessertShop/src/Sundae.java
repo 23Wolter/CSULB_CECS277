@@ -38,10 +38,11 @@ public class Sundae extends IceCream {
      * @param toppingPrice - The price of the topping
      * @param name - the name of the sundae
      */
-    public Sundae(IceCream icecream, int toppingPrice, String name){
+    public Sundae(IceCream icecream, int toppingPrice, int toppingCalories, String name){
         this.icecream = icecream;
         super.name = name;
         this.toppingPrice = toppingPrice;
+        this.toppingCalories = toppingCalories;
         sundaeCalories = getTotalCalories();
     }
 

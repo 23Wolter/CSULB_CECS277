@@ -10,6 +10,11 @@ public class Test {
 
     public static void main (String[] args){
 
+        System.out.println("********** TEST **********");
+        System.out.println("");
+        System.out.println("--------------------");
+        System.out.println("");
+
         //Testing the Candy class
         System.out.println("*** CANDY CLASS TESTING ***");
 
@@ -41,9 +46,10 @@ public class Test {
         System.out.println("Price pr lbs: " + candy.getPricePrLbs());
         System.out.println("Weight: " + candy.getWeight());
         System.out.println("Calories: " + candy.getCalories());
+
         System.out.println("");
-
-
+        System.out.println("--------------------");
+        System.out.println("");
 
         //Testing the Cookie class
 
@@ -64,7 +70,7 @@ public class Test {
         System.out.println("Calories: " + defaultCookie.getCalories());
         System.out.println("");
 
-        //Multi-argument constrcutor test
+        //Multi-argument constructor test
         System.out.println("** Multi-argument constructor testing **");
         Cookie cookie = new Cookie("Pumpkin Spice", 8, 322, 279);
         System.out.println(cookie);
@@ -77,9 +83,10 @@ public class Test {
         System.out.println("Price pr dz: " + cookie.getPricePrDz());
         System.out.println("Number of cookies: " + cookie.getNumber());
         System.out.println("Calories: " + cookie.getCalories());
+
         System.out.println("");
-
-
+        System.out.println("--------------------");
+        System.out.println("");
 
     }
 

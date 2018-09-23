@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DessertShop/DessertItem.class" afterPath="$PROJECT_DIR$/out/production/DessertShop/DessertItem.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/DessertShop/Test.class" afterPath="$PROJECT_DIR$/out/production/DessertShop/Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="$PROJECT_DIR$/src/Test.java" />
     </list>
     <ignored path="DessertShop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,7 +99,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IceCream.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="IceCream.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/IceCream.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -113,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sundae.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sundae.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Sundae.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="616">
@@ -691,7 +690,14 @@
       <option name="project" value="LOCAL" />
       <updated>1537681161956</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Testing done for candy class">
+      <created>1537682993045</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1537682993045</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -764,7 +770,8 @@
     <MESSAGE value="Dessert class added" />
     <MESSAGE value="Icecream class created" />
     <MESSAGE value="Sundae class changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sundae class changes" />
+    <MESSAGE value="Testing done for candy class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing done for candy class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1071,17 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IceCream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -1132,6 +1128,17 @@
           <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
           <folding>
             <element signature="e#0#588#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IceCream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
           </folding>
         </state>
       </provider>

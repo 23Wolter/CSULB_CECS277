@@ -11,16 +11,16 @@ public class Test {
     public static void main (String[] args){
 
         //Testing the Candy class
-        System.out.println("***CANDY CLASS TESTING***");
+        System.out.println("*** CANDY CLASS TESTING ***");
 
         //Default constructor test
-        System.out.println("***Default constructor testing***");
+        System.out.println("** Default constructor testing **");
         Candy defaultCandy = new Candy();
         System.out.println(defaultCandy);
         System.out.println("");
 
         //Method testing for defaultCandy item
-        System.out.println("**Methods testing***");
+        System.out.println("** Methods testing **");
         System.out.println("Name: " + defaultCandy.getName());
         System.out.println("Cost: " + defaultCandy.getCost());
         System.out.println("Price pr lbs: " + defaultCandy.getPricePrLbs());
@@ -29,13 +29,13 @@ public class Test {
         System.out.println("");
 
         //Multi-argument constructor test
-        System.out.println("**Multi-argument constructor testing***");
+        System.out.println("** Multi-argument constructor testing **");
         Candy candy = new Candy("gummyBear", 3.54, 75, 200);
         System.out.println(candy);
         System.out.println("");
 
         //Method testing for candy item
-        System.out.println("**Methods testing ***");
+        System.out.println("** Methods testing **");
         System.out.println("Name: " + candy.getName());
         System.out.println("Cost: " + candy.getCost());
         System.out.println("Price pr lbs: " + candy.getPricePrLbs());
@@ -47,6 +47,42 @@ public class Test {
         System.out.println("***ICECREAM CLASS TESTING***");
         IceCream icecream = new IceCream();
         System.out.println(icecream);
+
+
+
+        //Testing the Cookie class
+
+        System.out.println("*** COOKIE CLASS TESTING ***");
+
+        //Default constructor test
+        System.out.println("** Default constructor testing **");
+        Cookie defaultCookie = new Cookie();
+        System.out.println(defaultCookie);
+        System.out.println("");
+
+        //Method testing for defaultCookie item
+        System.out.println("** Methods testing **");
+        System.out.println("Name: " + defaultCookie.getName());
+        System.out.println("Cost: " + defaultCookie.getCost());
+        System.out.println("Price pr dz: " + defaultCookie.getPricePrDz());
+        System.out.println("Number of cookies: " + defaultCookie.getNumber());
+        System.out.println("Calories: " + defaultCookie.getCalories());
+        System.out.println("");
+
+        //Multi-argument constrcutor test
+        System.out.println("** Multi-argument constructor testing **");
+        Cookie cookie = new Cookie("Pumpkin Spice", 8, 322, 279);
+        System.out.println(cookie);
+        System.out.println("");
+
+        //Method testing for cookie item
+        System.out.println("** Methods testing **");
+        System.out.println("Name: " + cookie.getName());
+        System.out.println("Cost: " + cookie.getCost());
+        System.out.println("Price pr dz: " + cookie.getPricePrDz());
+        System.out.println("Number of cookies: " + cookie.getNumber());
+        System.out.println("Calories: " + cookie.getCalories());
+        System.out.println("");
 
 
 

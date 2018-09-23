@@ -89,6 +89,6 @@ public class Cookie extends DessertItem {
      */
     @Override
     public String toString() {
-        return "This is a " + name + " cookie. There are " + number + " of cookies in this portion. The price pr. dozen is " + pricePrDz + "cents. So the total price is " + getCost() + "cents. The calories are " + calories;
+        return "This is a " + name + " cookie. There are " + number + " cookies in this portion. The price pr. dozen is " + pricePrDz + " cents. So the total price is " + getCost() + " cents. The calories are " + calories;
     }
 }

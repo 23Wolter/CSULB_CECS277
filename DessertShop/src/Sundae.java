@@ -8,20 +8,25 @@
 
 public class Sundae extends IceCream {
 
-    private int topping;
+    private int toppingPrice;
 
     public Sundae(){
 
         super.name = "Sundae Icecream";
-
-
+        super.cost = 400;
+        toppingPrice = 100;
     }
 
-    public Sundae(int topping){
+    public Sundae(int toppingPrice, String name, int cost){
 
         super.name = name;
         super.cost = cost;
+        this.toppingPrice = toppingPrice;
+    }
 
-
+    @Override
+    public int getCost() {
+       int costOfIcecream = super.getCost();
+        return costOfIcecream + toppingPrice;
     }
 }

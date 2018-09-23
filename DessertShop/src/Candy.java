@@ -83,6 +83,10 @@ public class Candy extends DessertItem {
         return calories;
     }
 
+    //returns a string with information about this class
+    /**
+     * @return a string with information about this class
+     */
     @Override
     public String toString() {
         return "This is a " + super.name + " with a weight of: " + weight + " lbs. The price pr lbs is: " + pricePrLbs + " cents which makes the total price of this item " + getCost() + " cents. The calories of this item are: " + calories + ".";

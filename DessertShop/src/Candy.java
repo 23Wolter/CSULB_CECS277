@@ -16,29 +16,33 @@ public class Candy extends DessertItem {
 
     private double weight; //the weight of the candy
     private double pricePrLbs; //the price pr. lbs. for candy
+    private double calories; //the calories of the candy
 
     //default constructor
     /**
-     * default constructor, sets the name, weight, and price pr. lbs. for the candy item
+     * default constructor, sets the name, weight, calories and price pr. lbs. for the candy item
      */
     public Candy() {
         super.name = "lollipop";
         weight = 0.20;
         pricePrLbs = 100;
+        calories = 350;
     }
 
-    //multi-argument constructor, takes 3 parameter: name, weight, price pr. lbs.
+    //multi-argument constructor, takes 4 parameter: name, weight, price pr. lbs., and calories
     /**
-     * multi-argument constructor, takes 3 parameter
+     * multi-argument constructor, takes 4 parameter
      * @param name
      * @param weight
      * @param pricePrLbs
+     * @param calories
      */
-    public Candy(String name, double weight, int pricePrLbs){
+    public Candy(String name, double weight, int pricePrLbs, double calories){
 
         super.name = name;
         this.weight = weight;
         this.pricePrLbs = pricePrLbs;
+        this.calories = calories;
     }
 
     //calculates the price of candy based on the weight and price pr. lbs.
@@ -69,5 +73,13 @@ public class Candy extends DessertItem {
      */
     public double getWeight() {
         return weight;
+    }
+
+    //returns the calories of the candy
+    /**
+     * @return the calories of the candy
+     */
+    public double getCalories() {
+        return calories;
     }
 }

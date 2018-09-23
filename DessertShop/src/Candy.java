@@ -32,10 +32,10 @@ public class Candy extends DessertItem {
     //multi-argument constructor, takes 4 parameter: name, weight, price pr. lbs., and calories
     /**
      * multi-argument constructor, takes 4 parameter
-     * @param name
-     * @param weight
-     * @param pricePrLbs
-     * @param calories
+     * @param name - the name of the candy item
+     * @param weight - the weight of the portion of candy
+     * @param pricePrLbs - the price pr. lbs. for the amount of candy
+     * @param calories - the calories for the portion of candy
      */
     public Candy(String name, double weight, int pricePrLbs, double calories){
 

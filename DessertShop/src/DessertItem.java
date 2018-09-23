@@ -46,6 +46,13 @@ public abstract class DessertItem {
      */
     public abstract int getCost();
 
+    //Returns the calories of the dessert item
+    /**
+     *
+     * @return the calories of the dessert item
+     */
+    public abstract int getCalories();
+
 }
 
 

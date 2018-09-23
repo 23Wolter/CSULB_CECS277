@@ -79,6 +79,7 @@ public class Candy extends DessertItem {
     /**
      * @return the calories of the candy
      */
+    @Override
     public int getCalories() {
         return calories;
     }

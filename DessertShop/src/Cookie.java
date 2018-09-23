@@ -64,6 +64,7 @@ public class Cookie extends DessertItem {
     /**
      * @return the calories of a portion of cookies
      */
+    @Override
     public int getCalories() {
         return calories;
     }

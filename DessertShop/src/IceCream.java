@@ -58,6 +58,7 @@ public class IceCream extends DessertItem {
     /**
      * @return the amount of calories of an ice cream
      */
+    @Override
     public int getCalories() {
         return calories;
     }

@@ -10,8 +10,15 @@ public class Test {
 
     public static void main (String[] args){
 
-        //Testing Candy class
+        //Testing the Candy class
+        //Default constructor test
+        Candy defaultCandy = new Candy();
+        System.out.println();
+
+        //Multi-argument constructor test
         Candy candy = new Candy("gummy", 3.54, 7);
+
+        //Testing method getCost()
         int price = candy.getCost();
         System.out.println("this is the price of candy " + price);
 

@@ -16,7 +16,7 @@ public class Candy extends DessertItem {
 
     private double weight; //the weight of the candy
     private double pricePrLbs; //the price pr. lbs. for candy
-    private double calories; //the calories of the candy
+    private int calories; //the calories of the candy
 
     //default constructor
     /**
@@ -37,7 +37,7 @@ public class Candy extends DessertItem {
      * @param pricePrLbs - the price pr. lbs. for the amount of candy
      * @param calories - the calories for the portion of candy
      */
-    public Candy(String name, double weight, int pricePrLbs, double calories){
+    public Candy(String name, double weight, int pricePrLbs, int calories){
 
         super.name = name;
         this.weight = weight;
@@ -79,7 +79,7 @@ public class Candy extends DessertItem {
     /**
      * @return the calories of the candy
      */
-    public double getCalories() {
+    public int getCalories() {
         return calories;
     }
 

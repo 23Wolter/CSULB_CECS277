@@ -183,13 +183,44 @@ public class Test {
         //Testing the CheckOut Class
         System.out.println("*** TESTING CHECKOUT CLASS ***");
         System.out.println("");
+
+        //testing new checkout item
         Checkout checkout = new Checkout();
+        System.out.println(checkout);
+        System.out.println("");
+
+        //methods testing for Checkout class
+        System.out.println("** Methods testing **");
+        System.out.println("");
+
+        //testing the enterItem method
         checkout.enterItem(candy);
         checkout.enterItem(cookie);
         checkout.enterItem(iceCream);
         checkout.enterItem(sundae);
+
+        //testing the setTaxRate method
         checkout.setTaxRate(0.08);
+
+        //print out checkout with newly inserted data
+        System.out.println("print checkout receipt with items inserted, and taxrate set");
+        System.out.println("");
         System.out.println(checkout);
+
+        //testing numberOfItems method
+        System.out.println("The number of items in the cashregister is: " + checkout.numberOfItems());
+
+        //testing the clear method
+        checkout.clear();
+        System.out.println("The cashregister should now be cleared: " + checkout.numberOfItems());
+
+        //testing getTotalCost method
+        System.out.println("The totalcost in the cashregister is: " + checkout.getTotalCost());
+        System.out.println("One item is added");
+        checkout.enterItem(candy);
+        System.out.println("The total cost is now: " + checkout.getTotalCost());
+
+
     }
 
 }

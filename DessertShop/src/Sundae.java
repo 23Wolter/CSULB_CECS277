@@ -19,7 +19,6 @@ public class Sundae extends IceCream {
     private int toppingCalories;
     private int sundaeCalories;
 
-    //Default sundae constructor, setting the name, cost of the icecream and cost of the toppings
     /**
      * Default sundae constructor, setting the name, cost of the icecream and cost of the toppings
      */
@@ -32,7 +31,6 @@ public class Sundae extends IceCream {
         sundaeCalories = getCalories();
     }
 
-    //Multi-argument constructor sets an ice cream, the name, and toppingprice
     /**
      * Multi-argument constructor sets an ice cream, the name, and toppingprice
      * @param icecream - When toppings are added to an ice cream it becomes a Sundae, so an ice cream is needed
@@ -47,7 +45,6 @@ public class Sundae extends IceCream {
         sundaeCalories = getCalories();
     }
 
-    //calculates the price of the sundae
     /**
      * calculates the price of the sundae
      * --> adds the price of the icecream with the price of the topping
@@ -59,7 +56,6 @@ public class Sundae extends IceCream {
         return costOfIcecream + toppingPrice;
     }
 
-    //returns the price for the topping
     /**
      * @return the price for the topping
      */
@@ -67,7 +63,6 @@ public class Sundae extends IceCream {
         return toppingPrice;
     }
 
-    //returns the calories of the toppings
     /**
      * @return the calories of the toppings
      */
@@ -75,7 +70,6 @@ public class Sundae extends IceCream {
         return  toppingCalories;
     }
 
-    //returns the calories of the sundae, which includes the calories of the ice cream added with the toppings
     /**
      * @return the calories of the sundae, which includes the calories of the ice cream added with the toppings
      */
@@ -85,7 +79,6 @@ public class Sundae extends IceCream {
         return totalCal;
     }
 
-    //returns a string with information about this class
     /**
      *
      * @return a string with information about this class

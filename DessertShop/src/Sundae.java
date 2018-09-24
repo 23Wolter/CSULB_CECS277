@@ -26,7 +26,7 @@ public class Sundae extends IceCream {
     public Sundae(){
         IceCream icecream = new IceCream();
         this.icecream = icecream;
-        super.name = "Sundae Icecream";
+        super.name = icecream.getName() + " Sprinkles";
         toppingPrice = 100;
         toppingCalories = 125;
         sundaeCalories = getCalories();
@@ -37,11 +37,11 @@ public class Sundae extends IceCream {
      * Multi-argument constructor sets an ice cream, the name, and toppingprice
      * @param icecream - When toppings are added to an ice cream it becomes a Sundae, so an ice cream is needed
      * @param toppingPrice - The price of the topping
-     * @param name - the name of the sundae
+     * @param toppingName - the name of the topping
      */
-    public Sundae(String name, int toppingPrice, int toppingCalories, IceCream icecream){
+    public Sundae(String toppingName, int toppingPrice, int toppingCalories, IceCream icecream){
         this.icecream = icecream;
-        super.name = name;
+        super.name = icecream.getName() + " " + toppingName;
         this.toppingPrice = toppingPrice;
         this.toppingCalories = toppingCalories;
         sundaeCalories = getCalories();
@@ -85,6 +85,10 @@ public class Sundae extends IceCream {
         return totalCal;
     }
 
+    public IceCream getIcecream() {
+        return icecream;
+    }
+
     //returns a string with information about this class
     /**
      *
@@ -92,6 +96,6 @@ public class Sundae extends IceCream {
      */
     @Override
     public String toString() {
-        return "This is a " + name + ". The price for the topping is " + toppingPrice + " cents. The total price is " + getCost() + " cents. The calories of the topping are " + toppingCalories + ". The total calories are " + sundaeCalories;
+        return "This is a " + name + " Sundae. The price for the topping is " + toppingPrice + " cents. The total price is " + getCost() + " cents. The calories of the topping are " + toppingCalories + ". The total calories are " + sundaeCalories;
     }
 }

@@ -147,7 +147,7 @@ public class Test {
 
         //Multi-argument constructor test
         System.out.println("** Multi-argument constructor testing **");
-        Sundae sundae = new Sundae("Fudge Sundae", 100, 300, iceCream);
+        Sundae sundae = new Sundae("Fudge", 100, 300, iceCream);
         System.out.println(sundae);
         System.out.println("");
 
@@ -182,6 +182,7 @@ public class Test {
 
         //Testing the CheckOut Class
         System.out.println("*** TESTING CHECKOUT CLASS ***");
+        System.out.println("");
         Checkout checkout = new Checkout();
         checkout.enterItem(candy);
         checkout.enterItem(cookie);

@@ -30,7 +30,7 @@ public class Checkout {
         cashRegister.clear();
     }
 
-    public int totalCost() {
+    public int getTotalCost() {
         int totalCost = 0;
         for(DessertItem di : cashRegister) {
             totalCost += di.getCost();
@@ -38,10 +38,17 @@ public class Checkout {
         return totalCost;
     }
 
-    public int totalTax() {
-        int totalCost = totalCost();
+    public int getTotalTax() {
+        int totalCost = getTotalCost();
         int totalTax = (int) Math.round(totalCost * taxRate);
         return totalTax;
+    }
+
+    public double convertToDollars(double price){
+
+        double dollars = price/100;
+        return dollars;
+
     }
 
     public double getTaxRate() {
@@ -56,24 +63,32 @@ public class Checkout {
         String str = "\t O & J's Sweets \n \t -------------------- \n";
 
         for (DessertItem dessertItem : cashRegister) {
-            str += "" + dessertItem.getName() + "\n";
+            str += "" + dessertItem.getName();
 
             if(dessertItem instanceof Candy) {
                 Candy candy = (Candy) dessertItem;
-                str += "" + candy.getWeight() + " lbs @ " + candy.getPricePrLbs() + " cents/lbs";
+                str += " candy \n" + candy.getWeight() + " lbs @ " + candy.getPricePrLbs() + " cents/lbs";
             } else if(dessertItem instanceof Cookie) {
                 Cookie cookie = (Cookie) dessertItem;
-                str += "" + cookie.getNumber() + " cookies @ " + cookie.getPricePrDz() + " cents/dz";
+                str += " cookie \n" + cookie.getNumber() + " cookies @ " + cookie.getPricePrDz() + " cents/dz";
             } else if (dessertItem instanceof Sundae) {
                 Sundae sundae = (Sundae) dessertItem;
-                str += "topping price " + sundae.getToppingPrice() + " cents\t \t";
+                str += " sundae \n topping @ " + sundae.getToppingPrice() + " cents  + \n icecream @ $" + convertToDollars(sundae.getIcecream().getCost()) + " " + "\t" ;
             } else if (dessertItem instanceof IceCream) {
-                str += "\t \t";
+                str += " icecream \n one @ \t \t \t \t \t";
             }
 
-            str += "\t \t" + dessertItem.getCost() + "\n";
+            str += "\t \t $" + convertToDollars(dessertItem.getCost()) + " \n \n";
+
+
 
         }
+
+        str += "Number of items: " + cashRegister.size();
+
+        str += "\n Total tax: " + getTotalTax();
+
+        str += "\n Total cost: " + getTotalCost();
 
         return str;
     }

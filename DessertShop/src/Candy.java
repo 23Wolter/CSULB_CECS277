@@ -6,7 +6,6 @@
     Output: Cost, price pr. lbs., weight, names
 */
 
-//This class represents a candy item
 /**
  * This class represents a candy item
  * @author Josephine & Oliver
@@ -18,7 +17,6 @@ public class Candy extends DessertItem {
     private double pricePrLbs; //the price pr. lbs. for candy
     private int calories; //the calories of the candy
 
-    //default constructor
     /**
      * default constructor, sets the name, weight, calories and price pr. lbs. for the candy item
      */
@@ -29,7 +27,6 @@ public class Candy extends DessertItem {
         calories = 350;
     }
 
-    //multi-argument constructor, takes 4 parameter: name, weight, price pr. lbs., and calories
     /**
      * multi-argument constructor, takes 4 parameter
      * @param name - the name of the candy item
@@ -45,7 +42,6 @@ public class Candy extends DessertItem {
         this.calories = calories;
     }
 
-    //calculates the price of candy based on the weight and price pr. lbs.
     /**
      * calculates the price of candy based on the weight and price pr. lbs.
      * uses Math class to round to the nearest cent
@@ -59,7 +55,6 @@ public class Candy extends DessertItem {
         return price;
     }
 
-    //returns the price pr. lbs. for the candy as a double
     /**
      * @return the price pr. lbs. for a candy as a double
      */
@@ -67,7 +62,6 @@ public class Candy extends DessertItem {
         return pricePrLbs;
     }
 
-    //returns the weight of a candy as a double
     /**
      * @return the weight of a candy as a double
      */
@@ -75,7 +69,6 @@ public class Candy extends DessertItem {
         return weight;
     }
 
-    //returns the calories of the candy
     /**
      * @return the calories of the candy
      */
@@ -84,7 +77,6 @@ public class Candy extends DessertItem {
         return calories;
     }
 
-    //returns a string with information about this class
     /**
      * @return a string with information about this class
      */

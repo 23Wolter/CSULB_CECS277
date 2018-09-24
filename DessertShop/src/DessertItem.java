@@ -6,7 +6,6 @@
     Output: the name of the dessert item, and the cost
 */
 
-//the dessert item class represents the description of a dessert item
 /**
  * the dessert item class represents the description of a dessert item
  * @author Mimi Opkins
@@ -15,7 +14,6 @@ public abstract class DessertItem {
 
     protected String name; //the name of the dessert item
 
-    //Null constructor for DessertItem class
     /**
      * Null constructor for DessertItem class
      */
@@ -23,7 +21,6 @@ public abstract class DessertItem {
         this("");
     }
 
-    //Initializes DessertItem data
     /**
      * Initializes DessertItem data
      * @param name - the name of the dessert item
@@ -32,7 +29,6 @@ public abstract class DessertItem {
         this.name = name;
     }
 
-    //@return name of DessertItem
     /**
      * @return name of the dessert item
      */
@@ -40,13 +36,11 @@ public abstract class DessertItem {
         return name;
     }
 
-    //@return cost of DessertItem
     /**
      * @return the cost of the dessert item
      */
     public abstract int getCost();
 
-    //Returns the calories of the dessert item
     /**
      *
      * @return the calories of the dessert item

@@ -6,7 +6,6 @@
     Output:
 */
 
-//this class represents a cookie with a number, price, and price pr. dozen
 /**
  * this class represents a cookie with a number, price, and price pr. dozen
  * @author Josephine & Oliver
@@ -18,7 +17,6 @@ public class Cookie extends DessertItem {
     private double pricePrDz; //the price pr. dozen cookies
     private int calories; //the calories in the number of cookies
 
-    //default constructor, setting the number of cookies, the calories, and the price pr. dz.
     /**
      * default constructor, setting the number of cookies, the calories, and the price pr. dz.
      */
@@ -29,7 +27,6 @@ public class Cookie extends DessertItem {
         calories = 355;
     }
 
-    //multi-argument constructor sets the name, number, price pr. dz., and calories of the cookie item
     /**
      * multi-argument constructor sets the name, number, price pr. dz., and calories of the cookie item
      * @param name - the name of the cookie
@@ -44,7 +41,6 @@ public class Cookie extends DessertItem {
         this.calories = calories;
     }
 
-    //returns the number of cookies in this portion
     /**
      * @return the number of cookies in this portion
      */
@@ -52,7 +48,6 @@ public class Cookie extends DessertItem {
         return number;
     }
 
-    //returns the price per dozen cookies
     /**
      * @return the price per dozen cookies
      */
@@ -60,7 +55,6 @@ public class Cookie extends DessertItem {
         return pricePrDz;
     }
 
-    //returns the calories of a portion of cookies
     /**
      * @return the calories of a portion of cookies
      */
@@ -69,7 +63,6 @@ public class Cookie extends DessertItem {
         return calories;
     }
 
-    //calculates the price of the number of cookies
     /**
      * calculates the price of the number of cookies
      * --> divides the price pr. dz. by 12 to get the price pr. single cookie
@@ -84,7 +77,6 @@ public class Cookie extends DessertItem {
         return price;
     }
 
-    //returns a string with information about this class
     /**
      * @return a string with information about this class
      */

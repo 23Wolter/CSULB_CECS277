@@ -79,6 +79,10 @@ public class Sundae extends IceCream {
         return totalCal;
     }
 
+    public IceCream getIcecream() {
+        return icecream;
+    }
+
     /**
      *
      * @return a string with information about this class

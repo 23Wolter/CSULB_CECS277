@@ -86,9 +86,9 @@ public class Checkout {
 
         str += "Number of items: " + cashRegister.size();
 
-        str += "\n Total tax: " + getTotalTax();
+        str += "\n Total tax: $" + convertToDollars(getTotalTax());
 
-        str += "\n Total cost: " + getTotalCost();
+        str += "\n Total cost: $" + convertToDollars(getTotalCost()+getTotalTax());
 
         return str;
     }

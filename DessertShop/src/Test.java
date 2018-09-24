@@ -188,6 +188,7 @@ public class Test {
         checkout.enterItem(cookie);
         checkout.enterItem(iceCream);
         checkout.enterItem(sundae);
+        checkout.setTaxRate(0.08);
         System.out.println(checkout);
     }
 

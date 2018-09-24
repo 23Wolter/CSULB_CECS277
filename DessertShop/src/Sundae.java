@@ -25,7 +25,7 @@ public class Sundae extends IceCream {
     public Sundae(){
         IceCream icecream = new IceCream();
         this.icecream = icecream;
-        super.name = "Sundae Icecream";
+        super.name = icecream.getName() + " Fudge";
         toppingPrice = 100;
         toppingCalories = 125;
         sundaeCalories = getCalories();
@@ -35,11 +35,11 @@ public class Sundae extends IceCream {
      * Multi-argument constructor sets an ice cream, the name, and toppingprice
      * @param icecream - When toppings are added to an ice cream it becomes a Sundae, so an ice cream is needed
      * @param toppingPrice - The price of the topping
-     * @param name - the name of the sundae
+     * @param toppingName - the name of the sundae
      */
-    public Sundae(String name, int toppingPrice, int toppingCalories, IceCream icecream){
+    public Sundae(String toppingName, int toppingPrice, int toppingCalories, IceCream icecream){
         this.icecream = icecream;
-        super.name = name;
+        super.name = icecream.getName() + " " + toppingName;
         this.toppingPrice = toppingPrice;
         this.toppingCalories = toppingCalories;
         sundaeCalories = getCalories();

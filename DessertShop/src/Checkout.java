@@ -73,7 +73,7 @@ public class Checkout {
                 str += " cookie \n" + cookie.getNumber() + " cookies @ " + cookie.getPricePrDz() + " cents/dz";
             } else if (dessertItem instanceof Sundae) {
                 Sundae sundae = (Sundae) dessertItem;
-                str += " sundae \n topping @ " + sundae.getToppingPrice() + " cents  + \n icecream @ $" + convertToDollars(sundae.getIcecream().getCost()) + " " + "\t" ;
+                str += " sundae \n topping @ " + sundae.getToppingPrice() + " cents  + \n icecream @ $" + convertToDollars(sundae.getIcecream().getCost()) + " " + "\t \t" ;
             } else if (dessertItem instanceof IceCream) {
                 str += " icecream \n one @ \t \t \t \t \t";
             }
@@ -84,11 +84,11 @@ public class Checkout {
 
         }
 
-        str += "Number of items: " + cashRegister.size();
+        str += "Number of items: \t \t \t \t \t" + cashRegister.size();
 
-        str += "\n Total tax: $" + convertToDollars(getTotalTax());
+        str += "\n Total tax: \t \t \t \t \t $" + convertToDollars(getTotalTax());
 
-        str += "\n Total cost: $" + convertToDollars(getTotalCost()+getTotalTax());
+        str += "\n Total cost: \t \t \t \t \t $" + convertToDollars(getTotalCost()+getTotalTax());
 
         return str;
     }

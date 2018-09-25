@@ -1,16 +1,14 @@
-/*
-    Josephine & Oliver
-    September 12, 2018
-    Purpose: a cookie item has a number, a price, and a price pr. dozen
-    Inputs:
-    Output:
-*/
-
 /**
- * this class represents a cookie with a number, price, and price pr. dozen
+ * Josephine & Oliver
+ * September 22, 2018
+ * Purpose: a cookie item has a number, a price, and a price pr. dozen
+ * Input: name, number of cookies, a price pr. dz and calories
+ * Output: number of cookies, a price and calories
  * @author Josephine & Oliver
  * @date 09/22/18
+ * @version 1.0
  */
+
 public class Cookie extends DessertItem {
 
     private int number; //the number of cookies in a portion

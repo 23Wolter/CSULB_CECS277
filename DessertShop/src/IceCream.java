@@ -1,15 +1,12 @@
-/*
-    Josephine & Oliver
-    September 12, 2018
-    Purpose: an ice cream has just a cost, and can be a sundae if topping is added
-    Inputs: the cost of the ice cream and the amount of calories
-    Output: the cost of the ice cream and the calories
-*/
-
 /**
- * //this class represents an ice cream item
+ * Josephine & Oliver
+ * September 12, 2018
+ * Purpose: an ice cream has just a cost, and can be a sundae if topping is added
+ * Inputs: the cost of the ice cream and the amount of calories
+ * Output: the cost of the ice cream and the calories
  * @author Josephine & Oliver
  * @date 09/22/18
+ * @version 1.0
  */
 public class IceCream extends DessertItem {
 
@@ -22,7 +19,7 @@ public class IceCream extends DessertItem {
      */
     public IceCream(){
         super.name = "strawberry";
-        cost = 500;
+        cost = 800;
         calories = 470;
 
     }

@@ -1,13 +1,15 @@
-/*
-    Josephine & Oliver
-    September 12, 2018
-    Purpose:
-    Inputs:
-    Output:
+/**
+ * Purpose: Test every class constructor and method
+ * Inputs: The parameters for the multi-argument constrcutors
+ * Output: String representations of each test result
+ * @author Josephine Plass-Nielsen & Oliver Nielsen
+ * @date 09/25/2018
+ * @version 1.0
 */
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Test {
 
@@ -38,7 +40,7 @@ public class Test {
 
         //Multi-argument constructor test
         System.out.println("** Multi-argument constructor testing **");
-        Candy candy = new Candy("Gummy bears", 3.54, 75, 200);
+        Candy candy = new Candy("Gummy bear", 3.54, 75, 200);
         System.out.println(candy);
         System.out.println("");
 
@@ -54,8 +56,8 @@ public class Test {
         System.out.println("--------------------");
         System.out.println("");
 
-        //Testing the Cookie class
 
+        //Testing the Cookie class
         System.out.println("*** COOKIE CLASS TESTING ***");
 
         //Default constructor test
@@ -93,7 +95,6 @@ public class Test {
 
 
         //Testing the IceCream class
-
         System.out.println("*** ICECREAM CLASS TESTING ***");
 
         //Default constructor test
@@ -127,7 +128,6 @@ public class Test {
 
 
         //Testing the Sundae class
-
         System.out.println("*** SUNDAE CLASS TESTING ***");
 
         //Default constructor test
@@ -163,15 +163,18 @@ public class Test {
         System.out.println("--------------------");
         System.out.println("");
 
-        //Creates an arraylist of dessert items
-        System.out.println("DEMONSTRATING POLYMORPHISM");
-        ArrayList<DessertItem> dessertitems = new ArrayList<DessertItem>();
+        //Testing for polymorphism
+        System.out.println("*** DEMONSTRATING POLYMORPHISM ***");
+        ArrayList<DessertItem> dessertitems = new ArrayList<DessertItem>(); //Creates an arraylist of dessert items
 
+        //adds items to dessert item list
         dessertitems.add(candy);
         dessertitems.add(cookie);
         dessertitems.add(iceCream);
         dessertitems.add(sundae);
 
+        //prints out every item
+        System.out.println("print out every item in the ArrayList of type DessertItem");
         for (DessertItem di : dessertitems){
             System.out.println("This item is: " + di.getName());
             System.out.println("The cost of this item is: " + di.getCost());
@@ -179,6 +182,7 @@ public class Test {
             System.out.println("----------");
         }
 
+        System.out.println("");
 
         //Testing the CheckOut Class
         System.out.println("*** TESTING CHECKOUT CLASS ***");
@@ -186,6 +190,7 @@ public class Test {
 
         //testing new checkout item
         Checkout checkout = new Checkout();
+        System.out.println("print out receipt from default constructor");
         System.out.println(checkout);
         System.out.println("");
 
@@ -207,12 +212,15 @@ public class Test {
         System.out.println("");
         System.out.println(checkout);
 
+        System.out.println("");
+
         //testing numberOfItems method
         System.out.println("The number of items in the cashregister is: " + checkout.numberOfItems());
 
         //testing the clear method
+        System.out.println("testing the clear() method");
         checkout.clear();
-        System.out.println("The cashregister should now be cleared: " + checkout.numberOfItems());
+        System.out.println("The number of items in the cashregister is now: " + checkout.numberOfItems());
 
         //testing getTotalCost method
         System.out.println("The totalcost in the cashregister is: " + checkout.getTotalCost());
@@ -220,7 +228,59 @@ public class Test {
         checkout.enterItem(candy);
         System.out.println("The total cost is now: " + checkout.getTotalCost());
 
+        System.out.println("");
+        System.out.println("--------------------");
+        System.out.println("");
 
+        //Testing the Dessertitem Class
+        System.out.println("*** TESTING DESSERTITEM CLASS ***");
+        System.out.println("");
+
+        //testing getMax method
+        //testing two different dessertItems
+        System.out.println("testing getMax() method with two different dessertItems");
+        System.out.println("expected: gummy bear, result: " + DessertItem.getMax(candy, cookie));
+        System.out.println("expected: pistachio fudge, result: " + DessertItem.getMax(iceCream, sundae));
+
+        System.out.println("");
+
+        //testing the same cost but different calories
+        System.out.println("testing same cost with different calories");
+        IceCream iceCreamHighCalories = new IceCream("High calorie", 550, 620);
+        IceCream iceCreamLowCalories = new IceCream("Low calorie", 550, 235);
+        System.out.println("expected: high calorie, result: " + DessertItem.getMax(iceCreamHighCalories, iceCreamLowCalories));
+
+        System.out.println("");
+
+        //testing the exact same items
+        System.out.println("testing the exact same dessertItems");
+        System.out.println("expected: null (because this can't be compared), result: " + DessertItem.getMax(cookie, cookie));
+
+        System.out.println("");
+
+        //testing sorting an ArrayList of dessertItems
+        System.out.println("testing sorting the dessertItems list");
+        ArrayList<DessertItem> dessertList = new ArrayList<>();
+        dessertList.add(candy);
+        dessertList.add(cookie);
+        dessertList.add(iceCream);
+        dessertList.add(iceCreamLowCalories);
+        dessertList.add(iceCreamHighCalories);
+        dessertList.add(sundae);
+
+        System.out.println("Unsorted list:");
+        for (DessertItem item : dessertList) {
+            System.out.println(item.getName() + ", " + item.getCost() + ", " + item.getCalories());
+        }
+
+        System.out.println("");
+        //sorting the list based on the comparator from DessertItem's compareTo
+        Collections.sort(dessertList, DessertItem::compareTo);
+
+        System.out.println("Sorted list:");
+        for (DessertItem item : dessertList) {
+            System.out.println(item.getName() + ", " + item.getCost() + ", " + item.getCalories());
+        }
     }
 
 }

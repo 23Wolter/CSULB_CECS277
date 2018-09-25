@@ -1,16 +1,15 @@
-/*
-    Josephine & Oliver
-    September 12, 2018
-    Purpose: a Candy item has a weight and a price based on the weight
-    Inputs: Candy name, weight, price pr. lbs.
-    Output: Cost, price pr. lbs., weight, names
-*/
 
 /**
- * This class represents a candy item
+ * Josephine & Oliver
+ * September 22, 2018
+ * Purpose: represents a Candy item has a weight and a price based on the weight
+ * Inputs: Candy name, weight, price pr. lbs
+ * Output: Cost, price pr. lbs., weight, names
  * @author Josephine & Oliver
  * @date 09/22/18
+ * @version 1.0
  */
+
 public class Candy extends DessertItem {
 
     private double weight; //the weight of the candy
@@ -82,6 +81,6 @@ public class Candy extends DessertItem {
      */
     @Override
     public String toString() {
-        return "This is a " + super.name + " with a weight of: " + weight + " lbs. The price pr lbs is: " + pricePrLbs + " cents which makes the total price of this item " + getCost() + " cents. The calories of this item are: " + calories + ".";
+        return "This is a " + super.name + " candy with a weight of: " + weight + " lbs. The price pr lbs is: " + pricePrLbs + " cents which makes the total price of this item " + getCost() + " cents. The calories of this item are: " + calories + ".";
     }
 }

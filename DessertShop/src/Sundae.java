@@ -1,15 +1,11 @@
-/*
-    Josephine & Oliver
-    September 12, 2018
-    Purpose:
-    Inputs:
-    Output:
-*/
-
 /**
- * This class represents an icecream with toppings(a sundae). It has a name, cost and a total price with toppings included
+ * Josephine & Oliver
+ * Purpose: This class represents an icecream with toppings(a sundae). It has a name, cost and a total price with toppings included
+ * Inputs: a topping name, topping price, sundae calories, and an icecream to make into a sundae
+ * Outputs: topping name, price, calories, and icecream
  * @author Josephine & Oliver
  * @date 09/22/18
+ * @version 1.0
  */
 public class Sundae extends IceCream {
 
@@ -89,6 +85,6 @@ public class Sundae extends IceCream {
      */
     @Override
     public String toString() {
-        return "This is a " + name + ". The price for the topping is " + toppingPrice + " cents. The total price is " + getCost() + " cents. The calories of the topping are " + toppingCalories + ". The total calories are " + sundaeCalories;
+        return "This is a " + name + " sundae. The price for the topping is " + toppingPrice + " cents. The total price is " + getCost() + " cents. The calories of the topping are " + toppingCalories + ". The total calories are " + sundaeCalories;
     }
 }

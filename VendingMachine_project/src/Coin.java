@@ -18,7 +18,7 @@ public class Coin {
      */
     public Coin(){
 
-        value = 1;
+        value = 5;
     }
 
     /**

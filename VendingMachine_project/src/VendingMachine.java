@@ -11,8 +11,9 @@
 import java.util.*;
 public class VendingMachine {
 
-    private ArrayList<Product> products = new ArrayList<Product>(); //Vending machine has an array of products
+    private ArrayList<ArrayList<Product>> products = new ArrayList<ArrayList<Product>>(); //Vending machine has an array of products
     private ArrayList<Coin> coins = new ArrayList<Coin>(); //Vending machine takes an arraylist of coins
+    private ArrayList<Coin> coinRepository = new ArrayList<Coin>(); //Holds the coins of the current buyer, before storing permanently
 
     /**
      * Default constructor
@@ -24,9 +25,9 @@ public class VendingMachine {
      *
      * @param product - adds products to the products Arraylist
      */
-    public void addProducts(Product product){
+    public void addProducts(int index, Product product){
 
-        products.add(product);
+        products.get(index).add(product);
     }
 
     /**
@@ -34,7 +35,16 @@ public class VendingMachine {
      * @return the products in the vending machine
      */
     public ArrayList<Product> getProducts() {
-        return products;
+        ArrayList<Product> allProducts = new ArrayList<>();
+        for(int i=0; i<products.size(); i++) {
+            for(Product p : products.get(i)) {
+                allProducts.add(p);
+            }
+        }
+        return allProducts;
+    }
+    public Product getFirstProduct(int index) {
+        return products.get(index).get(0);
     }
 
     /**
@@ -63,12 +73,11 @@ public class VendingMachine {
 
             value += c.getValue();
         }
-
         return value;
 
     }
 
-    public void selectProduct(Product product){
+    /*public void selectProduct(Product product){
 
         System.out.println("Following products can be purchased: ");
         for(Product p : products){
@@ -81,7 +90,33 @@ public class VendingMachine {
         System.out.println("The value of " + product.getName() +" is " + product.getValue());
         System.out.println("Insert coins:");
 
+    }*/
 
+    //adds a coin to the temporary repository
+    public void addCoinToRepo(Coin c) {
+        coinRepository.add(c);
+    }
+
+
+    //returns the sum of the coins in the repository
+    public int sumOfRepo() {
+        int value = 0;
+        for (Coin c : coinRepository){
+
+            value += c.getValue();
+        }
+        return value;
+    }
+
+    public void clearRepository() {
+        coinRepository.clear();
+    }
+
+    //transfers the coins from the temporary repository to the main coin storage
+    public void transferCoin() {
+        for(Coin c : coinRepository) {
+            coins.add(c);
+        }
     }
 
     @Override

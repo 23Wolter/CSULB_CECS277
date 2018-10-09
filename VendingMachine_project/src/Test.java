@@ -1,4 +1,5 @@
 import java.util.AbstractCollection;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -7,6 +8,8 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args){
+
+        System.out.println("TEST OF METHODS");
 
         //Creates coins
         Coin c1 = new Coin();
@@ -32,7 +35,7 @@ public class Test {
         System.out.println(p1);
 
         //Creates a vending machine
-        VendingMachine machine = new VendingMachine();
+        VendingMachine machine = new VendingMachine(3);
 
         //Adds the coins to the vending machine
         machine.addCoins(c1);
@@ -47,92 +50,187 @@ public class Test {
         System.out.println(machine.sumOfCoins());
 
         //Adds product to the vending machine
-        machine.addProducts(p1);
-        machine.addProducts(p2);
-        machine.addProducts(p3);
+        machine.addProducts(0, p1);
+        machine.addProducts(1, p2);
+        machine.addProducts(2, p3);
 
         //
         System.out.println(machine.getProducts());
 
-        machine.selectProduct(p1);
+        //machine.selectProduct(p1);
 
 
         System.out.println("--------------------------");
+        System.out.println("VENDING MACHINE SIMULATION");
+        System.out.println("--------------------------");
 
-        VendingMachine vm = new VendingMachine();
-        vm.addProducts(p1);
-        vm.addProducts(p2);
-        vm.addProducts(p3);
+        VendingMachine vm = new VendingMachine(3);
+        vm.addProducts(0, p1);
+        vm.addProducts(1, p2);
+        vm.addProducts(2, p3);
+
+        System.out.println("");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Welcome to the vending machine");
-        System.out.println("You can buy these products if they are in stock: ");
-        System.out.println("--- [1] Water");
-        System.out.println("--- [2] Coffee");
-        System.out.println("--- [3] Soda");
+        boolean run = true;
+
+        while (run) {
+            System.out.println("--------------------");
+            System.out.println("");
+            System.out.println("Welcome to the vending machine");
+            System.out.println("To exit press 'q'");
+            System.out.println("Are you a customer [1] or employee [2]?");
+
+            String s = scanner.next();
+            System.out.println("--------------------");
+
+            if(s.equals("1")) {
+
+                System.out.println("You can buy these products if they are in stock: ");
+                System.out.println("--- [1] Water");
+                System.out.println("--- [2] Coffee");
+                System.out.println("--- [3] Soda");
 
 
-        Product chosenProduct;
+                Product chosenProduct = new Product("temp", 0);
 
-        boolean loop = true;
-        while (loop) {
-            System.out.println("Choose either '1', '2', or '3', or 'q' to exit");
-            String choice = scanner.next();
+                boolean loop = true;
+                while (loop) {
+                    System.out.println("Choose either '1', '2', or '3', or 'q' to exit");
+                    String choice = scanner.next();
 
-            switch (choice) {
-                case "1":
-                    loop = false;
-                    chosenProduct = vm.getProducts().get(0);
-                    break;
-                case "2":
-                    loop = false;
-                    chosenProduct = vm.getProducts().get(1);
-                    break;
-                case "3":
-                    loop = false;
-                    chosenProduct = vm.getProducts().get(2);
-                    break;
-                case "q":
-                    return;
-                default:
-                    System.out.println("Not a valid option, choose again");
-            }
+                    switch (choice) {
+                        case "1":
+                            loop = false;
+                            chosenProduct = vm.getFirstProduct(0);
+                            vm.removeProduct(0);
+                            break;
+                        case "2":
+                            loop = false;
+                            chosenProduct = vm.getFirstProduct(1);
+                            vm.removeProduct(1);
+                            break;
+                        case "3":
+                            loop = false;
+                            chosenProduct = vm.getFirstProduct(2);
+                            vm.removeProduct(2);
+                            break;
+                        case "q":
+                            return;
+                        default:
+                            System.out.println("Not a valid option, choose again");
+                    }
 
-        }
-        System.out.println("You have chosen " + chosenProduct.getName());
-        System.out.println("This item costs: " + chosenProduct.getValue());
+                }
 
-        loop = true;
-        while (loop) {
-            System.out.println("Do you want to add a coin (value of 5) y/n?");
-            String coinAdd = scanner.next();
-            switch (coinAdd) {
-                case "y":
-                    Coin c = new Coin();
-                    vm.addCoinToRepo(c);
+                System.out.println("You have chosen " + chosenProduct.getName());
+                System.out.println("This item costs: " + chosenProduct.getValue());
+
+                loop = true;
+                while (loop) {
+                    System.out.println("Do you want to add a coin (value of 5) y/n?");
+                    String coinAdd = scanner.next();
+                    switch (coinAdd) {
+                        case "y":
+                            Coin c = new Coin();
+                            vm.addCoinToRepo(c);
+                            System.out.println("The total amount in the machine is now " + vm.sumOfRepo());
+                            break;
+                        case "n":
+                            loop = false;
+                            break;
+                        default:
+                            System.out.println("Not a valid option, choose again");
+                    }
+                }
+
+                System.out.println("The product cost " + chosenProduct.getValue());
+                System.out.println("You have inserted " + vm.sumOfRepo());
+
+                if(vm.sumOfRepo() >= chosenProduct.getValue()) {
+                    System.out.println("Here you go! Thank you for shopping!");
+                    vm.transferCoin();
+                    vm.clearRepository();
+                } else {
+                    System.out.println("There is insufficient money, your coins are returned, try again");
+                    vm.clearRepository();
                     System.out.println("The total amount in the machine is now " + vm.sumOfRepo());
-                    break;
-                case "n":
-                    loop = false;
-                    break;
-                default:
-                    System.out.println("Not a valid option, choose again");
+                }
+
+            } else if (s.equals("2")) {
+
+                boolean employeeLoop = true;
+                while (employeeLoop) {
+
+
+                    System.out.println("What would you like to do? ");
+                    System.out.println("[1] Restock");
+                    System.out.println("[2] Retrieve coins");
+                    System.out.println("[q] exit");
+
+                    String str = scanner.next();
+                    System.out.println("--------------------");
+
+                    if (str.equals("1")) {
+
+                        boolean loop = true;
+                        while (loop) {
+
+                            System.out.println("The current stock is:");
+                            ArrayList<Product> ps = vm.getProducts();
+                            for (Product p : ps) {
+                                System.out.println(p.getName());
+                            }
+                            System.out.println("--------------------");
+                            System.out.println("What would you like to restock?");
+                            System.out.println("[1] Water");
+                            System.out.println("[2] Coffee");
+                            System.out.println("[3] Soda");
+                            System.out.println("[q] Finished restocking");
+
+                            String restock = scanner.next();
+                            switch (restock) {
+                                case "1":
+                                    Product water = new Product("Water", 10);
+                                    vm.addProducts(0, water);
+                                    break;
+                                case "2":
+                                    Product coffee = new Product("Coffee", 15);
+                                    vm.addProducts(1, coffee);
+                                    break;
+                                case "3":
+                                    Product soda = new Product("Soda", 25);
+                                    vm.addProducts(2, soda);
+                                    break;
+                                case "q":
+                                    loop = false;
+                                    break;
+                                default:
+                                    System.out.println("Not a valid input, try again");
+                            }
+                        }
+
+                    } else if (str.equals("2")) {
+
+                        System.out.println("The total amount retrieved is: " + vm.sumOfCoins());
+                        vm.clearCoins();
+
+                    } else if (str.equals("q")) {
+                        employeeLoop = false;
+                    } else {
+                        System.out.println("Not a valid input, try again");
+                    }
+                }
+
+            } else if(s.equals("q")) {
+                return;
+            } else {
+                System.out.println("Not a valid input, try again");
             }
         }
 
-        System.out.println("The product cost " + chosenProduct.getValue());
-        System.out.println("You have inserted " + vm.sumOfRepo());
 
-        if(vm.sumOfRepo() >= chosenProduct.getValue()) {
-            System.out.println("Here you go! Thank you for shopping!");
-            vm.transferCoin();
-            vm.clearRepository();
-            return;
-        } else {
-            System.out.println("There is insufficient money, your coins are returned, try again");
-            vm.clearRepository();
-            return;
-        }
+
 
 
     }

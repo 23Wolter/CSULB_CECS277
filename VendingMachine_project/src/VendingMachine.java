@@ -18,7 +18,16 @@ public class VendingMachine {
     /**
      * Default constructor
      */
-    public VendingMachine(){
+    public  VendingMachine() {
+        products.add(new ArrayList<>());
+        products.add(new ArrayList<>());
+        products.add(new ArrayList<>());
+    }
+
+    public VendingMachine(int numberOfProducts){
+        for(int i=0; i<numberOfProducts; i++) {
+            products.add(new ArrayList<Product>());
+        }
     }
 
     /**
@@ -26,8 +35,15 @@ public class VendingMachine {
      * @param product - adds products to the products Arraylist
      */
     public void addProducts(int index, Product product){
+        if(index < products.size()) {
+            products.get(index).add(product);
+        } else {
+            System.out.println("This index does not exist");
+        }
+    }
 
-        products.get(index).add(product);
+    public void removeProduct(int index) {
+        products.get(index).remove(0);
     }
 
     /**
@@ -117,6 +133,10 @@ public class VendingMachine {
         for(Coin c : coinRepository) {
             coins.add(c);
         }
+    }
+
+    public void clearCoins() {
+        coins.clear();
     }
 
     @Override

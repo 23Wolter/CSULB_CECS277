@@ -1,5 +1,11 @@
 /**
- * Created by josep on 10-10-2018.
+ * Josephine & Oliver
+ * October 10, 2018
+ * Purpose: This program simulates a vending machine
+ * Inputs: numberOfProducts, index, product, coin
+ * Output: A list of products, a specific product, number of coins, value of coins, value of coins in repo
+ * @author Josephine Plass-Nielsen & Oliver Nielsen
+ * @version 1.0
  */
 public class EarthToAlienAdapter {
 }

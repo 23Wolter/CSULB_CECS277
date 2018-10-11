@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23503fef-ac55-4c79-a963-cf3aa6561288" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AlienCellPhone.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EarthCellPhone.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/EarthToAlienAdapter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="File_IO.iws" />
@@ -48,11 +45,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EarthCellPhone.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EarthCellPhone.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/EarthCellPhone.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="66" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EarthToAlienAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EarthToAlienAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -462,7 +469,14 @@
       <option name="project" value="LOCAL" />
       <updated>1539234412999</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Interfaces added.">
+      <created>1539234677553</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1539234677553</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -498,7 +512,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created main method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created main method" />
+    <MESSAGE value="Interfaces added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaces added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -525,6 +540,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
           <caret line="1" column="66" selection-start-line="1" selection-start-column="66" selection-end-line="1" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EarthToAlienAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
           <folding />
         </state>
       </provider>

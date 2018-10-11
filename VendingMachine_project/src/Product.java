@@ -1,9 +1,9 @@
 /**
  * Josephine & Oliver
- * October 4, 2018
- * Purpose: This class simulates a product in the vending machine
- * Inputs:
- * Output:
+ * October 9, 2018
+ * Purpose: This class simulates a product to be purchased from the vending machine
+ * Inputs: Name of product, value of product
+ * Output: Name of product, value of product
  * @author Josephine Plass-Nielsen & Oliver Nielsen
  * @version 1.0
 
@@ -16,10 +16,14 @@ public class Product {
     /**
      * Default constructor
      */
-    public Product(){}
+    public Product(){
+        name = "Latte";
+        value = 15;
+    }
 
     /**
-     * Default constructor
+     * Multi-argument constructor, takes 2 parameters
+     *
      */
     public Product(String name, int value){
         this.name = name;
@@ -27,7 +31,7 @@ public class Product {
     }
 
     /**
-     *
+     * Gets the name of the product
      * @return the name of the product
      */
     public String getName() {
@@ -35,36 +39,35 @@ public class Product {
     }
 
     /**
-     *
-     * @param name - takes a name and set this name to the name of the product
+     * Sets the name to the name of the product
+     * @param name - takes a String name
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     *
-     * @return the value of the product
+     * Gets the value of the product
+     * @return the value
      */
     public int getValue() {
         return value;
     }
 
     /**
-     *
-     * @param value - sets the value of the product
+     * Sets the value of the product
+     * @param value - sets the value
      */
     public void setValue(int value) {
         this.value = value;
     }
 
     /**
-     *
      * @return a string with information about this class
      */
     @Override
     public String toString() {
-        String str = "This is the following product: " + getName() + " and a value of: " + getValue();
+        String str = "Product name is " + getName() + " with a value of " + getValue() + "DKK.";
         return str;
     }
 }

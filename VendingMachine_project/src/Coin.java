@@ -1,9 +1,9 @@
 /**
  * Josephine & Oliver
- * October 4, 2018
+ * October 9, 2018
  * Purpose: This class simulates a coin
- * Inputs:
- * Output:
+ * Inputs:  coin value
+ * Output:  coin value
  * @author Josephine Plass-Nielsen & Oliver Nielsen
  * @version 1.0
 
@@ -19,6 +19,13 @@ public class Coin {
     public Coin(){
 
         value = 5;
+    }
+
+    /**
+     * Multi-argument constructor
+     */
+    public Coin(int value){
+        this.value = value;
     }
 
     /**

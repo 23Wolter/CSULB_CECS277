@@ -1,12 +1,11 @@
 /**
  * Josephine & Oliver
- * October 4, 2018
+ * October 9, 2018
  * Purpose: This program simulates a vending machine
- * Inputs:
- * Output:
+ * Inputs: numberOfProducts, index, product, coin
+ * Output: A list of products, a specific product, number of coins, value of coins, value of coins in repo
  * @author Josephine Plass-Nielsen & Oliver Nielsen
  * @version 1.0
-
  */
 import java.util.*;
 public class VendingMachine {
@@ -17,6 +16,7 @@ public class VendingMachine {
 
     /**
      * Default constructor
+     * Three ArrayLists are added to the ArrayList products - So the vending machine has three different products as a standard
      */
     public  VendingMachine() {
         products.add(new ArrayList<>());
@@ -24,6 +24,10 @@ public class VendingMachine {
         products.add(new ArrayList<>());
     }
 
+    /**
+     * Multi-argument constructor
+     * @param numberOfProducts - sets the amount of how many different products that the vending machine contains
+     */
     public VendingMachine(int numberOfProducts){
         for(int i=0; i<numberOfProducts; i++) {
             products.add(new ArrayList<Product>());
@@ -31,8 +35,9 @@ public class VendingMachine {
     }
 
     /**
-     *
-     * @param product - adds products to the products Arraylist
+     * Adds products to the different ArrayLists dependent on the type of the product
+     * @param index - sets the place for which ArrayList(category) the product should be placed in
+     * @param product - Takes a product to add
      */
     public void addProducts(int index, Product product){
         if(index < products.size()) {
@@ -42,16 +47,20 @@ public class VendingMachine {
         }
     }
 
+    /**
+     * Removes the first product in the ArrayList
+     * @param index - takes an index to remove the first
+     */
     public void removeProduct(int index) {
         products.get(index).remove(0);
     }
 
     /**
-     *
+     * Prints the products of the ArrayList
      * @return the products in the vending machine
      */
     public ArrayList<Product> getProducts() {
-        ArrayList<Product> allProducts = new ArrayList<>();
+        ArrayList<Product> allProducts = new ArrayList<>(); //A new ArrayList is created to list all items from the given ArrayList
         for(int i=0; i<products.size(); i++) {
             for(Product p : products.get(i)) {
                 allProducts.add(p);
@@ -59,6 +68,12 @@ public class VendingMachine {
         }
         return allProducts;
     }
+
+    /**
+     * Returns the first product of a given ArrayList in the products ArrayList
+     * @param index - Indicates which kind of product to get
+     * @return the product of the given index
+     */
     public Product getFirstProduct(int index) {
         return products.get(index).get(0);
     }
@@ -72,7 +87,7 @@ public class VendingMachine {
     }
 
     /**
-     *
+     * Gets the size of the coins ArrayList
      * @return how many coins in the vending machine
      */
     public int getCoins(){
@@ -80,41 +95,31 @@ public class VendingMachine {
     }
 
     /**
-     *
+     * Calculates the value of all coins
      * @return the value for all the coins in the vending machine
      */
     public int sumOfCoins(){
         int value = 0;
         for (Coin c : coins){
 
-            value += c.getValue();
+            value += c.getValue(); //Gets value from each coin and add them together
         }
         return value;
 
     }
 
-    /*public void selectProduct(Product product){
-
-        System.out.println("Following products can be purchased: ");
-        for(Product p : products){
-            System.out.println(p.getName());
-        }
-        System.out.println("");
-        System.out.println("Choose a product.");
-
-        System.out.println("You have chosen: " + product.getName());
-        System.out.println("The value of " + product.getName() +" is " + product.getValue());
-        System.out.println("Insert coins:");
-
-    }*/
-
-    //adds a coin to the temporary repository
+    /**
+     * adds a coin to the temporary repository in case that the coins has to be returned to the costumer
+     * @param - takes a coin
+     */
     public void addCoinToRepo(Coin c) {
         coinRepository.add(c);
     }
 
-
-    //returns the sum of the coins in the repository
+    /**
+     * Calculates the sum of the coins in the repository
+     * @return the sum of the coins
+     */
     public int sumOfRepo() {
         int value = 0;
         for (Coin c : coinRepository){
@@ -124,23 +129,35 @@ public class VendingMachine {
         return value;
     }
 
+    /**
+     * Clears the repository when a purchase is successful or not
+     */
     public void clearRepository() {
         coinRepository.clear();
     }
 
-    //transfers the coins from the temporary repository to the main coin storage
+    /**
+     * transfers the coins from the temporary repository to the vending machine
+     */
     public void transferCoin() {
         for(Coin c : coinRepository) {
-            coins.add(c);
+            coins.add(c); //Adds coins from the purchase to the coins ArrayList
         }
     }
 
+    /**
+     * Empties coins from vending machine
+     */
     public void clearCoins() {
         coins.clear();
     }
 
+    /**
+     *
+     * @return a String with information about this class
+     */
     @Override
     public String toString() {
-        return super.toString();
+        return "This is a vending machine... bibopbiip";
     }
 }

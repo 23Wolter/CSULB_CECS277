@@ -1,12 +1,14 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * Purpose: This class represents an icecream with toppings(a sundae). It has a name, cost and a total price with toppings included
  * Inputs: a topping name, topping price, sundae calories, and an icecream to make into a sundae
  * Outputs: topping name, price, calories, and icecream
- * @author Josephine & Oliver
- * @date 09/22/18
+ * @author Josephine and Oliver
+ * date 09/22/18
  * @version 1.0
  */
+package DessertShop;
+
 public class Sundae extends IceCream {
 
     private IceCream icecream;
@@ -32,6 +34,8 @@ public class Sundae extends IceCream {
      * @param icecream - When toppings are added to an ice cream it becomes a Sundae, so an ice cream is needed
      * @param toppingPrice - The price of the topping
      * @param toppingName - the name of the sundae
+     * @param toppingCalories - calories of topping
+     *
      */
     public Sundae(String toppingName, int toppingPrice, int toppingCalories, IceCream icecream){
         this.icecream = icecream;
@@ -43,7 +47,7 @@ public class Sundae extends IceCream {
 
     /**
      * calculates the price of the sundae
-     * --> adds the price of the icecream with the price of the topping
+     * -- adds the price of the icecream with the price of the topping
      * @return the price of the sundae
      */
     @Override

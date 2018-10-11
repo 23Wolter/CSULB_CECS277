@@ -1,13 +1,14 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * September 25, 2018
  * Purpose: a dessert item is a description of what all the dessert items has in common
  * Inputs: the name of the dessert item
  * Output: the name of the dessert item, the cost, and a comparison of the larger object
- * @author Mimi Opkins, Josephine Plass-Nielsen & Oliver Nielsen
+ * @author Mimi Opkins, Josephine Plass-Nielsen and Oliver Nielsen
  * @version 1.0
 
 */
+package DessertShop;
 
 public abstract class DessertItem implements Comparable {
 

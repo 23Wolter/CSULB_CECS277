@@ -1,13 +1,14 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * September 22, 2018
  * Purpose: a cookie item has a number, a price, and a price pr. dozen
  * Input: name, number of cookies, a price pr. dz and calories
  * Output: number of cookies, a price and calories
- * @author Josephine & Oliver
- * @date 09/22/18
+ * @author Josephine and Oliver
+ * date 09/22/18
  * @version 1.0
  */
+package DessertShop;
 
 public class Cookie extends DessertItem {
 
@@ -63,10 +64,10 @@ public class Cookie extends DessertItem {
 
     /**
      * calculates the price of the number of cookies
-     * --> divides the price pr. dz. by 12 to get the price pr. single cookie
-     * --> then multiplies with how many cookies are in the portion
-     * --> the number is rounded to the nearest number (cent)
-     * --> the number is a double, which is cast to an int, so it can be set as the price
+     * -- divides the price pr. dz. by 12 to get the price pr. single cookie
+     * -- then multiplies with how many cookies are in the portion
+     * -- the number is rounded to the nearest number (cent)
+     * -- the number is a double, which is cast to an int, so it can be set as the price
      * @return the price of the number of cookies in the portion
      */
     @Override

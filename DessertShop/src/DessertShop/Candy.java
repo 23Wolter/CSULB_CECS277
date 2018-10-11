@@ -1,14 +1,15 @@
 
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * September 22, 2018
  * Purpose: represents a Candy item has a weight and a price based on the weight
  * Inputs: Candy name, weight, price pr. lbs
  * Output: Cost, price pr. lbs., weight, names
- * @author Josephine & Oliver
- * @date 09/22/18
+ * @author Josephine and Oliver
+ * date 09/22/18
  * @version 1.0
  */
+package DessertShop;
 
 public class Candy extends DessertItem {
 

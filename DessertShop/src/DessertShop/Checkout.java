@@ -1,11 +1,11 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * September 25, 2018
  * Purpose: To represent a checkout register that can manage multiple dessert items
  * Inputs: Dessert items, price and taxrate
  * Output: A list of dessert items, a total cost, tax rate
  */
-
+package DessertShop;
 import java.util.ArrayList;
 
 public class Checkout {

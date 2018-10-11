@@ -2,8 +2,8 @@
  * Purpose: Test every class constructor and method
  * Inputs: The parameters for the multi-argument constrcutors
  * Output: String representations of each test result
- * @author Josephine Plass-Nielsen & Oliver Nielsen
- * @date 09/25/2018
+ * @author Josephine Plass-Nielsen and Oliver Nielsen
+ * date 09/25/2018
  * @version 1.0
 */
 

@@ -32,11 +32,19 @@ public class EarthToAlienAdapter implements EarthCellPhone {
      * @param fileName - Needs the name of the file to write to
      */
     @Override
-    public void sendMessage(String languageType, String fileName) {
+    public void sendMessage(String languageType, String fileName) throws LangNotSupportedException {
 
         //first check if language exists in language ArrayList
+        if(languageType.equals(validLanguage)){
 
-        String translatedText = acp.translateText(fileName); //this calls the specific alien's translate method
+            String translatedText = acp.translateText(fileName); //this calls the specific alien's translate method
+        } else {
+
+            throw new LangNotSupportedException("Language is not supported yet");
+
+        }
+
+
 
         //create a new file with the translated text (overwrite new filename of this meesage)
     }

@@ -23,8 +23,9 @@ public class Main {
 
         Klingon k = new Klingon();
         k.alienSendText("sgre.txt");
-        System.out.println(k.translateText("rgf.txt"));
-        k.alienReadText("sgr.txt");
+        k.alienReadText("test-message.txt");
+        String str = k.translateText("test-message.txt");
+        System.out.println(str);
 
         EarthToAlienAdapter ea = new EarthToAlienAdapter(new Klingon());
     }

@@ -27,7 +27,8 @@ public class VendingMachine {
     /**
      * Multi-argument constructor
      * @param numberOfProducts - sets the amount of how many different products that the vending machine contains
-     */
+     */,
+
     public VendingMachine(int numberOfProducts){
         for(int i=0; i<numberOfProducts; i++) {
             products.add(new ArrayList<Product>());

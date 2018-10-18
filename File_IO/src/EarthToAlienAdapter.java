@@ -10,6 +10,7 @@
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,11 +20,14 @@ public class EarthToAlienAdapter implements EarthCellPhone {
     private AlienCellPhone acp;
 
     //ArrayList of valid languages
-    private ArrayList<String> validLanguage = new ArrayList<String>();
+    private ArrayList<String> validLanguage;
+
+    private String translatedText;
 
     //Constructor takes an instance of the AlienCellPhone
     public EarthToAlienAdapter(AlienCellPhone acp) {
         this.acp = acp;
+        validLanguage = new ArrayList<String>();
     }
 
     /**
@@ -35,14 +39,24 @@ public class EarthToAlienAdapter implements EarthCellPhone {
     public void sendMessage(String languageType, String fileName) throws LangNotSupportedException {
 
         //first check if language exists in language ArrayList
-        if(languageType.equals(validLanguage)){
-
-            String translatedText = acp.translateText(fileName); //this calls the specific alien's translate method
-        } else {
-
-            throw new LangNotSupportedException("Language is not supported yet");
-
+        for (String lang : validLanguage) {
+            if(languageType.equals(lang)){
+                translatedText = acp.translateText(fileName); //this calls the specific alien's translate method
+                break;
+            } else {
+                throw new LangNotSupportedException("Language is not supported yet");
+            }
         }
+
+        try {
+            String newFileName = fileName.substring(0, fileName.length()-4) + ".txt";
+            PrintWriter output = new PrintWriter(newFileName);
+            output.println(translatedText);
+            output.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("File not found: " + e);
+        }
+
 
 
 

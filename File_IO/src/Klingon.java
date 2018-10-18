@@ -18,11 +18,13 @@ public class Klingon implements AlienCellPhone {
     @Override
     public void alienReadText(String fileName) {
         try {
-            File file = new File(fileName);
+            ClassLoader classLoader = getClass().getClassLoader();
+            File file = new File(classLoader.getResource(fileName).getFile());
             Scanner inputFile = new Scanner(file);
             while (inputFile.hasNext()) {
                 System.out.println(inputFile.next() + " ");
             }
+            inputFile.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found " + e);
         }
@@ -34,16 +36,17 @@ public class Klingon implements AlienCellPhone {
         String translatedText = "";
 
         try {
-            File file = new File(fileName);
+            ClassLoader classLoader = getClass().getClassLoader();
+            File file = new File(classLoader.getResource(fileName).getFile());
             Scanner inputFile = new Scanner(file);
             while (inputFile.hasNext()) {
-                translatedText += inputFile.next() + wordEndings[(int) Math.random() * 3];
+                int rand = (int) Math.floor(Math.random() * 3);
+                translatedText += inputFile.next() + wordEndings[rand] + " ";
             }
-
+            inputFile.close();
         } catch (FileNotFoundException e) {
             System.out.println("File not found: " + e);
         }
-
         return translatedText;
     }
 }

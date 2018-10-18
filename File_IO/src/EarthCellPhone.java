@@ -10,6 +10,5 @@
 
 public interface EarthCellPhone {
     public void sendMessage(String languageType, String fileName) throws LangNotSupportedException;
-
     public void readMessage(String fileName);
 }

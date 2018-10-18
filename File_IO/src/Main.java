@@ -11,22 +11,26 @@
 public class Main {
     public static void main(String[] args){
 
-        Trekkie t = new Trekkie();
-        t.sendMessage("klingon", "something.txt");
-        t.readMessage("something.txt");
+        Klingon klingon = new Klingon();
+        klingon.alienSendText("empty.txt");
+        klingon.alienReadText("test-message.txt");
+        String klingonString = klingon.translateText("test-message.txt");
+        System.out.println(klingonString);
 
-        Vulcan v = new Vulcan();
-        v.alienSendText("hlkfshj.txt");
-        System.out.println(v.translateText("sgege.txt"));
-        v.alienReadText("fjeppjr.txt");
+        System.out.println("--------------------");
 
-
-        Klingon k = new Klingon();
-        k.alienSendText("sgre.txt");
-        k.alienReadText("test-message.txt");
-        String str = k.translateText("test-message.txt");
-        System.out.println(str);
+        Vulcan vulcan = new Vulcan();
+        vulcan.alienSendText("empty.txt");
+        vulcan.alienReadText("test-message.txt");
+        String vulcanString = vulcan.translateText("test-message.txt");
+        System.out.println(vulcanString);
 
         EarthToAlienAdapter ea = new EarthToAlienAdapter(new Klingon());
+        try {
+
+            ea.sendMessage("Klingon", "test-message.txt");
+        } catch (LangNotSupportedException e) {
+            System.out.println(e);
+        }
     }
 }

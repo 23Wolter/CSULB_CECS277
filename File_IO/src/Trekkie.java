@@ -1,10 +1,10 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * October 23, 2018
  * Purpose: The purpose of this class is to simulate a trekkie
  * Inputs: Same as interface
  * Output: Same as interface
- * @author Josephine Plass-Nielsen & Oliver Nielsen
+ * @author Josephine Plass-Nielsen and Oliver Nielsen
  * @version 1.0
  */
 

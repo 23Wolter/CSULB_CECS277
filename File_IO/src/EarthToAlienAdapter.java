@@ -1,10 +1,10 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * October 23, 2018
  * Purpose: The purpose of this class is to act like an adapter between the AlienCellPhone and the EarthCellPhone
  * Inputs: languageType, filename language, filename
  * Output: void
- * @author Josephine Plass-Nielsen & Oliver Nielsen
+ * @author Josephine Plass-Nielsen and Oliver Nielsen
  * @version 1.0
  */
 

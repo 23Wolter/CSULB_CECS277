@@ -1,10 +1,10 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * October 23, 2018
  * Purpose: The purpose of this class is create a custom exception
  * Inputs: Message
  * Output: Message
- * @author Josephine Plass-Nielsen & Oliver Nielsen
+ * @author Josephine Plass-Nielsen and Oliver Nielsen
  * @version 1.0
  */
 

@@ -1,5 +1,5 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * October 23, 2018
  * Purpose: Interface for Earth cellphone
  * Inputs: LanguageType, fileName

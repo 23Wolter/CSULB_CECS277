@@ -1,10 +1,10 @@
 /**
- * Josephine & Oliver
+ * Josephine and Oliver
  * October 23, 2018
  * Purpose: The purpose of this class is to simulate a user interface/testing
  * Inputs: languageType, fileName
  * Output: files
- * @author Josephine Plass-Nielsen & Oliver Nielsen
+ * @author Josephine Plass-Nielsen and Oliver Nielsen
  * @version 1.0
  */
 

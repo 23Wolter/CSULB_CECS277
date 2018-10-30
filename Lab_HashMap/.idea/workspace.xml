@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a52895b4-8e83-42e0-9b19-e68704639c24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Collections_Project/src/HashMap_Test.java" afterPath="$PROJECT_DIR$/../Collections_Project/src/HashMap_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../File_IO/.idea/misc.xml" afterPath="$PROJECT_DIR$/../File_IO/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../File_IO/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../File_IO/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Lab_HashMap.iws" />

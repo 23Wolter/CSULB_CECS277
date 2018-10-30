@@ -14,15 +14,9 @@ import java.util.TreeMap;
 
 public class TreeMapTest implements MainTest {
 
-    @Override
-    public Iterator createIterator() {
-        return null;
-    }
+    private TreeMap<String, Integer> treeMap;
 
-    public static void main(String[] args) {
-
-        TreeMap<String, Integer> treeMap = new TreeMap<>();
-
+    public TreeMapTest(){
         try {
 
             File file = new File("QWords_points.txt");
@@ -41,8 +35,12 @@ public class TreeMapTest implements MainTest {
         }  catch (FileNotFoundException e) {
             System.out.println("File not found: " + e);
         }
-
-        System.out.println(treeMap);
     }
+
+    @Override
+    public Iterator createIterator() {
+        return new TreeMapIterator();
+    }
+
 
 }

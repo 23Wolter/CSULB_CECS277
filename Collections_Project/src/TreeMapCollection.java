@@ -12,11 +12,11 @@ import java.util.TreeMap;
  * Output: the time it takes to load the file
  */
 
-public class TreeMapTest implements MainTest {
+public class TreeMapCollection implements Collection {
 
     private TreeMap<String, Integer> treeMap;
 
-    public TreeMapTest(){
+    public TreeMapCollection(){
         try {
 
             File file = new File("QWords_points.txt");
@@ -39,7 +39,7 @@ public class TreeMapTest implements MainTest {
 
     @Override
     public Iterator createIterator() {
-        return new TreeMapIterator();
+        return new TreeMapIterator(treeMap);
     }
 
 

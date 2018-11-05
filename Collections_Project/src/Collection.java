@@ -1,6 +1,6 @@
 import java.util.Iterator;
 
-public interface MainTest {
+public interface Collection {
 
     Iterator createIterator();
 }

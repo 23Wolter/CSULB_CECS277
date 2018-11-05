@@ -23,7 +23,7 @@ public class HashMapTest {
                 String[] wordsAndPoints = line.split(" ");
 
                 String currentWord = wordsAndPoints[0];
-                Integer currentPoint = Integer.parseInt(wordsAndPoints[0]);
+                Integer currentPoint = Integer.parseInt(wordsAndPoints[1]);
 
                 hm.put(currentWord,currentPoint);
 
@@ -33,7 +33,7 @@ public class HashMapTest {
         }
 
 
-        System.out.println();
+        System.out.println(hm);
 
     }
 }

@@ -6,34 +6,35 @@ import java.util.Scanner;
 
 public class HashMapTest {
 
+    private static long time;
+
     public static void main(String[] args){
 
         //Creating HashMap
         Map<String, Integer> hm = new HashMap<>();
 
        //Initializes the chosen file
-        File inputFile = new File("QWords_points.txt");
+        File inputFile = new File("QWords.txt");
 
         //Reads from file
         try {
             Scanner in = new Scanner(inputFile);
+
+            time = System.nanoTime();
+
             while(in.hasNext()){
-
-                String line = in.nextLine();
-                String[] wordsAndPoints = line.split(" ");
-
-                String currentWord = wordsAndPoints[0];
-                Integer currentPoint = Integer.parseInt(wordsAndPoints[1]);
-
-                hm.put(currentWord,currentPoint);
-
+                hm.put(in.nextLine(),0);
             }
+
+            time = System.nanoTime() - time;
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
 
 
         System.out.println(hm);
+        System.out.println(time);
 
     }
 }

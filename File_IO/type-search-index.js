@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"<Unnamed>","l":"AlienCellPhone"},{"p":"<Unnamed>","l":"EarthCellPhone"},{"p":"<Unnamed>","l":"EarthToAlienAdapter"},{"p":"<Unnamed>","l":"InvalidLanguageException"},{"p":"<Unnamed>","l":"Klingon"},{"p":"<Unnamed>","l":"Main"},{"p":"<Unnamed>","l":"Trekkie"},{"p":"<Unnamed>","l":"Vulcan"}]
